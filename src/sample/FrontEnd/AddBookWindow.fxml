@@ -22,9 +22,9 @@
                   <Font name="Arial Unicode MS" size="16.0" />
                </font>
             </Label>
-            <TextField layoutX="129.0" layoutY="165.0" />
-            <TextField layoutX="129.0" layoutY="201.0" />
-            <TextField layoutX="129.0" layoutY="243.0" />
+            <TextField fx:id="addBookName" layoutX="129.0" layoutY="165.0" />
+            <TextField fx:id="addBookAuthor" layoutX="129.0" layoutY="201.0" />
+            <TextField fx:id="addBookYear" layoutX="129.0" layoutY="243.0" />
             <Label layoutX="41.0" layoutY="165.0" prefHeight="32.0" prefWidth="108.0" text="Name">
                <font>
                   <Font name="Arial Unicode MS" size="16.0" />
