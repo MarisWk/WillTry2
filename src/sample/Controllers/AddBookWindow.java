@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
 public class AddBookWindow {
@@ -30,8 +31,29 @@ public class AddBookWindow {
     private Button AddBookWindowCancelButton;
 
     @FXML
-    void initialize() {
+    private CheckBox addBookAvailable;
 
+    @FXML
+    void initialize() {
+        AddBookWindowAddButton.setOnAction(event -> {
+            String addButtonBookNameText = addBookName.getText().trim();
+            String addButtonBookAuthorText = addBookAuthor.getText().trim();
+            String addButtonBookYearText = addBookYear.getText().trim();
+            String addButtonBookYearAvailable = addBookAvailable.getText().trim();
+
+            if(!addButtonBookNameText.equals("") && !addButtonBookAuthorText.equals("") &&
+                    !addButtonBookYearText.equals(""))
+                addBook(addButtonBookNameText,addButtonBookAuthorText,addButtonBookYearText,addButtonBookYearAvailable);
+            else System.out.println("All fields are mandatory");
+
+        });
+
+    }
+
+    private void addBook(String addButtonBookNameText,
+                         String addButtonBookAuthorText,
+                         String addButtonBookYearText,
+                         String addButtonBookYearAvailable) {
 
     }
 }
