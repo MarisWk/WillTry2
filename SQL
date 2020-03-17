@@ -1,0 +1,17 @@
+DROP database if exists library;
+
+CREATE DATABASE library;
+
+USE library;
+
+create table books(
+	id int auto_increment,
+    name varchar(100),
+    author varchar(255),
+    bookyear varchar(20),
+    bookstatus int,
+    primary key (id)
+);
+
+
+select * from books;
